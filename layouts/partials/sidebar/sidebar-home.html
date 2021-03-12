@@ -39,14 +39,13 @@
   		<input type="submit" value="Subscribe" name="subscribe" >
           </form>
   	</div>
+    <hr class="hr-fade sidebar-hr" />
     {{ end }}
 </div>
-
 <div class="taxo-root">
-{{ partial "taxonomy/taxonomy-tags" . }}
 {{ partial "taxonomy/taxonomy-categories" . }}
+<hr class="hr-fade sidebar-hr" />
+{{ partial "taxonomy/taxonomy-tags" . }}
 {{ partial "taxonomy/taxonomy-series" . }}
 </div>
-<hr class="hr-fade sidebar-hr" />
-
 {{ end }}
