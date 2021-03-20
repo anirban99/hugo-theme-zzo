@@ -1,6 +1,6 @@
 {{ if isset .Site.Params "mailchimp" }}
-<div class="footer__poweredby">
-  <div class="social">
+<div class="container text-center">
+  <!-- <div class="social"> -->
       <span>
           Subscribe to Newsletter
       </span>
@@ -12,7 +12,7 @@
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="{{ with .Site.Params.mailprotect }}{{.}}{{end}}" tabindex="-1" value=""></div>
   <input type="submit" value="Subscribe" name="subscribe" >
   </form>
-  </div>
+  <!-- </div> -->
 </div>
 <!-- <hr class="hr-fade sidebar-hr" /> -->
 {{ end }}
