@@ -1,0 +1,18 @@
+{{ if isset .Site.Params "mailchimp" }}
+<div class="container text-center">
+  <!-- <div class="social"> -->
+      <span>
+          Subscribe to Newsletter
+      </span>
+
+  <form action="{{ with .Site.Params.mailchimp }}{{.}}{{end}}" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+  <!-- <input type="name" placeholder="Name" name="NAME" autocomplete="on" required> -->
+  <input type="email" placeholder="Email" name="EMAIL" autocomplete="on" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="{{ with .Site.Params.mailprotect }}{{.}}{{end}}" tabindex="-1" value=""></div>
+  <input type="submit" value="Subscribe" name="subscribe" >
+  </form>
+  <!-- </div> -->
+</div>
+<!-- <hr class="hr-fade sidebar-hr" /> -->
+{{ end }}
