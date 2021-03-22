@@ -21,8 +21,8 @@
       {{ partial "body/tags" . }}
     </div>
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
-      {{ partial "body/toc" . }}
-      {{ .Content }}
+      {{ partial "body/toc" . }} <!-- To add table of contents before the article -->
+      {{ .Content }} <!-- To add contents in the article -->
     </article>
     
     {{ partial "script/clipboard-script" . }}
@@ -54,7 +54,7 @@
   var enableToc = JSON.parse({{ $enableToc | jsonify }});
   var toc = JSON.parse({{ $toc | jsonify }});
   var tocPosition = JSON.parse({{ $tocPosition | jsonify }});
-  
+
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
 
